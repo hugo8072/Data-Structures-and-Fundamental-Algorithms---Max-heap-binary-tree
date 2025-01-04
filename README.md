@@ -28,11 +28,4 @@ The program ensures stability by checking for an empty heap before performing op
 Input File Format
 The input file should contain one command per line. Commands may be followed by multiple arguments separated by spaces. Lines starting with '#' are treated as comments and ignored.
 
-Example Input:
-insert 7 9 3 8
-print
-Example Output:
-Heap=
-9
-8 3
-7
+
