@@ -18,33 +18,33 @@ int main() {
 
         if (command == "insert") {
             int item;
-            bool heapFullShown = false; // Flag para controlar a exibição da mensagem de heap cheio
+            bool heapFullShown = false; // Flag to control the display of heap full message
             while (ss >> item) {
                 if (maxHeap.getN() == maxHeap.getNv() && !heapFullShown) {
-                    cout << "Comando insert: Heap cheio!\n";
-                    heapFullShown = true; // Marca que a mensagem foi exibida
+                    cout << "Insert command: Heap is full!\n";
+                    heapFullShown = true; // Mark that the message has been displayed
                 }
-                if (!heapFullShown) { // Apenas tenta inserir se ainda não atingiu o limite
+                if (!heapFullShown) { // Only try to insert if the limit hasn't been reached
                     maxHeap.insert(item);
                 }
             }
         } else if (command == "print_max") {
-            maxHeap.print_max();
+            maxHeap.printMax();
         } else if (command == "print") {
             maxHeap.print();
         } else if (command == "dim") {
             maxHeap.dim();
         } else if (command == "dim_max") {
-            maxHeap.dim_max();
+            maxHeap.dimMax();
         } else if (command == "clear") {
             maxHeap.clear();
-            cout << "Comando clear: Heap vazio!\n";
+            cout << "Clear command: Heap is empty!\n";
         } else if (command == "delete") {
             maxHeap.deleteMax();
         } else if (command == "redim_max") {
             int newNv;
             if (ss >> newNv) {
-                maxHeap.redim_max(newNv);
+                maxHeap.redimMax(newNv);
             }
         } else if (command == "heapify_up") {
             int item, count = 0, items[200];  // Assuming 200 is a safe limit for input
@@ -52,10 +52,10 @@ int main() {
                 items[count++] = item;
             }
             if (count > 0) {
-                maxHeap.heapify_up(items, count);
+                maxHeap.heapifyUp(items, count);
             }
         } else {
-            cout << "Comando " << command << " é inválido!\n";
+            cout << "Command " << command << " is invalid!\n";
         }
     }
 

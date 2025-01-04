@@ -1,4 +1,4 @@
-Max Heap Command Operated Program
+﻿Max Heap Command Operated Program
 This project is a C++11 program designed to manage a binary tree of type max heap for storing integer items (positive or negative). The items represent both the key and the information. Commands generally allow inserting, removing, listing items, and other specific operations. The heap is implemented using a vector with a maximum capacity of N elements, indexed from 0 to N-1.
 Features
 - Insert items into the heap in the order presented.
@@ -27,6 +27,7 @@ Error Handling
 The program ensures stability by checking for an empty heap before performing operations. If an operation cannot be executed due to an empty heap, appropriate error messages are printed.
 Input File Format
 The input file should contain one command per line. Commands may be followed by multiple arguments separated by spaces. Lines starting with '#' are treated as comments and ignored.
+
 Example Input
 # This line is a comment
 insert 7 9 3 8
